@@ -1,0 +1,43 @@
+﻿@{var cuenta = (Cuenta)Model; }
+
+<div class="row">
+    <div class="col-6">
+        <form action="/Cuenta/registrar" method="post">
+
+            <div class="form-group">
+                <label>Categoria</label>
+                <select name="IdCategoria" class="form-control">
+                    <option value="">-- Selecciona una opcion --</option>
+                    @foreach (var item in ViewBag.Categorias)
+                    {
+                        <option value="@item.Id">@item.Nombre</option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Nombre</label>
+                <input id="nombrepe" class="form-control" name="Nombre" value="@Model.Nombre" />
+                <p id="Incorrecto">@Html.ValidationMessage("Nombre")</p>
+            </div>
+
+            <div class="form-group">
+                <label>Saldo Inicial</label>
+                <input id="montope" class="form-control" name="Saldo" value="@Model.Saldo" />
+                @Html.ValidationMessage("Saldo")
+            </div>
+            
+            <div class="form-group">
+                <label>Moneda</label>
+                <select name="IdMoneda" class="form-control">
+                    <option value="">-- Selecciona una opcion --</option>
+                    @foreach (var item in ViewBag.Monedas)
+                    {
+                        <option value="@item.Id">@item.Nombre</option>
+                    }
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+    </div>
+</div>

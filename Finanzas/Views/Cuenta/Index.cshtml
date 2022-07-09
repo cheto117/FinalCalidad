@@ -1,0 +1,55 @@
+﻿@{
+    List<Cuenta> cuentitas = ((List<Cuenta>)Model);
+}
+
+<h1>Lista de cuentas</h1>
+<a href="/Cuenta/Registrar" class="float-right btn btn-primary">Crear Cuenta</a>
+<br />
+
+<h4>Monto Dolares: @ViewBag.Dolares $./</h4>
+<h4>Monto Soles: @ViewBag.Soles S./</h4>
+<h5>Monto total en soles: @ViewBag.Total S./</h5>
+
+<div class="row">
+    <div class="col">
+        <table id="tabla" class="table">
+            <thead class="text-center">
+                <tr>
+                    <th>Categoria</th>
+                    <th>Moneda</th>
+                    <th>Nombre</th>
+                    <th>Saldo</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                @foreach (var item in cuentitas)
+                {
+                    <tr>
+                        <td>@item.Categoria.Nombre</td>
+                        <td>@item.Moneda.Nombre</td>
+                        <td>@item.Nombre</td>
+                        <td class="text-center">
+                            @if (item.IdCategoria == 2)
+                            {
+                                <strong>Limite</strong> @string.Format("{0:N2}", item.Limite)
+                                <br />
+                            }
+                            @if (item.IdMoneda == 1)
+                            {
+                                <strong>Saldo</strong> @string.Format("{0:N2}", item.Saldo)<span> S/.</span>
+                            }
+                            @if (item.IdMoneda == 2)
+                            {
+                                <strong>Saldo</strong> @string.Format("{0:N2}", item.Saldo)<span> $/.</span>
+                            }
+                        </td>
+                        <td>
+                            <a href="/transaccion/index?id=@item.Id">Acciones</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

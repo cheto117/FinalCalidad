@@ -1,0 +1,500 @@
+{
+  "id": "4e8f3935-a8b2-48c3-bdb9-87fe58265a7b",
+  "version": "2.0",
+  "name": "Finanzas",
+  "url": "https://localhost:44315/",
+  "tests": [{
+    "id": "49d7273d-1d99-4227-8c2d-8ef7865014d1",
+    "name": "Cuenta_Test",
+    "commands": [{
+      "id": "500736f5-50df-4fd4-a021-1e58ffea9b51",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:44315/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bb1dfe3f-f1aa-44fc-bc64-187e838ec14a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Crud",
+      "targets": [
+        ["linkText=Crud", "linkText"],
+        ["css=.nav-item:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Crud')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Cuenta')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Crud')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "71b0efa7-0d8f-4d90-9d4d-814242995729",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=Correcto",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aed6f84c-8d54-49ab-832e-8c9783ea062a",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "b9d652a1-90f4-4920-b19e-9bd522dc05c3",
+    "name": "Cuenta_Registrar",
+    "commands": [{
+      "id": "beeaed6f-9630-4639-bbe6-9ac04531d06a",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:44315/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f56f083f-a947-4768-9e5d-a96f154103c4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Crud",
+      "targets": [
+        ["linkText=Crud", "linkText"],
+        ["css=.nav-item:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Crud')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Cuenta')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Crud')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7679b465-3238-4fac-9fcf-04337441ed46",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Crear Cuenta",
+      "targets": [
+        ["linkText=Crear Cuenta", "linkText"],
+        ["css=.float-right", "css:finder"],
+        ["xpath=//a[contains(text(),'Crear Cuenta')]", "xpath:link"],
+        ["xpath=//div[@id='Correcto']/main/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Cuenta/Registrar')]", "xpath:href"],
+        ["xpath=//main/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Crear Cuenta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c7d95455-a8b4-4b49-98ea-465c51674460",
+      "comment": "",
+      "command": "select",
+      "target": "name=IdCategoria",
+      "targets": [],
+      "value": "label=Propio"
+    }, {
+      "id": "4b1eb835-dc7a-4812-a77d-6a8cdb5d0db7",
+      "comment": "",
+      "command": "type",
+      "target": "id=nombrepe",
+      "targets": [
+        ["id=nombrepe", "id"],
+        ["name=Nombre", "name"],
+        ["css=#nombrepe", "css:finder"],
+        ["xpath=//input[@id='nombrepe']", "xpath:attributes"],
+        ["xpath=//div[@id='Correcto']/main/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Ahorros del Año"
+    }, {
+      "id": "a541a659-c6b6-4e04-bc08-32012fc65d07",
+      "comment": "",
+      "command": "type",
+      "target": "id=montope",
+      "targets": [
+        ["id=montope", "id"],
+        ["name=Saldo", "name"],
+        ["css=#montope", "css:finder"],
+        ["xpath=//input[@id='montope']", "xpath:attributes"],
+        ["xpath=//div[@id='Correcto']/main/div/div/form/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "360"
+    }, {
+      "id": "c48dfbdc-7b83-4669-ad4e-36c54578be21",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pb-3",
+      "targets": [
+        ["css=.pb-3", "css:finder"],
+        ["xpath=//div[@id='Correcto']/main", "xpath:idRelative"],
+        ["xpath=//main", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8538b75c-42b1-4d1c-83f9-736cd8073e43",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='Correcto']/main/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Guardar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a8e5662-0b97-47a9-b598-3ee58e46f3dd",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=Correcto",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "57474f19-252d-4da0-9029-f583b0747da7",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "8855cf0a-45bb-4afb-a0ac-bae7ad478548",
+    "name": "Cuenta_Registrar_Mal",
+    "commands": [{
+      "id": "9ab0613b-616a-46e9-a61a-5517834c9302",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:44315/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "340e9b08-6142-41dc-a470-aba5297ae054",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "694x768",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "02908820-3fe7-4074-afa0-d49ff6d27b75",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Crud",
+      "targets": [
+        ["linkText=Crud", "linkText"],
+        ["css=.nav-item:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Crud')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Cuenta')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Crud')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa820011-baef-4faa-ab7f-48bfacf6ae00",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Crear Cuenta",
+      "targets": [
+        ["linkText=Crear Cuenta", "linkText"],
+        ["css=.float-right", "css:finder"],
+        ["xpath=//a[contains(text(),'Crear Cuenta')]", "xpath:link"],
+        ["xpath=//div[@id='Correcto']/main/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Cuenta/Registrar')]", "xpath:href"],
+        ["xpath=//main/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Crear Cuenta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b2d3c556-e5b4-4f8a-89b2-2aae25225362",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='Correcto']/main/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Guardar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c087e017-457f-4a3c-83ab-059154a58d6f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=Incorrecto",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c7180004-b89d-47e8-b67d-447c842d3109",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "e4cfc307-43d8-46ae-8e6a-551c716d4562",
+    "name": "Transaccion_Test",
+    "commands": [{
+      "id": "ad1cd3e1-fcd0-4e3f-bf67-cec715db8dc1",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:44315/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "68f4b856-66b9-4db5-9cb7-dc7de48b8ac0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "694x768",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0fbf18fa-b4bc-4aa2-a8bd-688eee674e58",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Crud",
+      "targets": [
+        ["linkText=Crud", "linkText"],
+        ["css=.nav-item:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Crud')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Cuenta')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Crud')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4aec343d-8eab-4bf7-a74c-b60bc5670a44",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Acciones",
+      "targets": [
+        ["linkText=Transaccion", "linkText"],
+        ["css=tr:nth-child(1) a", "css:finder"],
+        ["xpath=//a[contains(text(),'Transaccion')]", "xpath:link"],
+        ["xpath=//table[@id='tabla']/tbody/tr/td[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/transaccion/index?id=1')]", "xpath:href"],
+        ["xpath=//td[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Transaccion')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "59563c63-a8be-4f33-99ea-0da3ce1fb627",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=Correcto",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bf8fd623-7d85-4565-85bc-1101c73d8ef7",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "db75b992-c414-4b95-a0d0-bf99a2f1b816",
+    "name": "Transaccion_Registrar",
+    "commands": [{
+      "id": "d96753c2-ca4b-48e9-9c41-019a61b7b2e2",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:44315/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d724c928-73f1-4add-8717-306548a74437",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "694x768",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d0be26a5-653d-4fb0-a2b7-e2a07b8aa4df",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Crud",
+      "targets": [
+        ["linkText=Crud", "linkText"],
+        ["css=.nav-item:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Crud')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Cuenta')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Crud')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f7426585-071c-4f9a-b26e-a621764dbcf8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Acciones",
+      "targets": [
+        ["linkText=Transaccion", "linkText"],
+        ["css=tr:nth-child(1) a", "css:finder"],
+        ["xpath=//a[contains(text(),'Transaccion')]", "xpath:link"],
+        ["xpath=//table[@id='tabla']/tbody/tr/td[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/transaccion/index?id=1')]", "xpath:href"],
+        ["xpath=//td[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Transaccion')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "17a0641d-ea7a-48f4-b4a4-15ea7505f386",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Registrar transaccion",
+      "targets": [
+        ["linkText=Registrar transaccion", "linkText"],
+        ["css=div:nth-child(3) > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Registrar transaccion')]", "xpath:link"],
+        ["xpath=//div[@id='Correcto']/main/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/transaccion/crear?id=1')]", "xpath:href"],
+        ["xpath=//main/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Registrar transaccion')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4cb3c58c-065b-4d65-baaf-c7fae22052fa",
+      "comment": "",
+      "command": "click",
+      "target": "name=IdTipo",
+      "targets": [
+        ["name=IdTipo", "name"],
+        ["css=.form-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//select[@name='IdTipo']", "xpath:attributes"],
+        ["xpath=//div[@id='Correcto']/main/div/div/form/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3710b911-959a-4fad-aed1-bbbd8eaee701",
+      "comment": "",
+      "command": "select",
+      "target": "name=IdTipo",
+      "targets": [],
+      "value": "label=Ingreso"
+    }, {
+      "id": "ac76af68-4e5a-44a1-9154-a02d7380ed46",
+      "comment": "",
+      "command": "type",
+      "target": "name=Descripcion",
+      "targets": [
+        ["name=Descripcion", "name"],
+        ["css=.form-group:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=//textarea[@name='Descripcion']", "xpath:attributes"],
+        ["xpath=//div[@id='Correcto']/main/div/div/form/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Gane el futbol 5 a 4 25 soles de apuesta"
+    }, {
+      "id": "b3f3ca86-7631-4876-85f0-db5edd03ded3",
+      "comment": "",
+      "command": "type",
+      "target": "name=Monto",
+      "targets": [
+        ["name=Monto", "name"],
+        ["css=.form-group:nth-child(4) > .form-control", "css:finder"],
+        ["xpath=//input[@name='Monto']", "xpath:attributes"],
+        ["xpath=//div[@id='Correcto']/main/div/div/form/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "25"
+    }, {
+      "id": "92d25015-2bbd-483f-a89e-082c2d2479fc",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=Correcto",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "66523b5d-794e-44cc-8ffa-790d39c36846",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "7494688e-6145-47a6-b596-1b6f092b530c",
+    "name": "Transaccion_Registrar_Mal",
+    "commands": [{
+      "id": "40d0decd-095a-4ea5-93d0-86b33ef56a00",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:44315/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "929749bc-8f67-4bc6-9e79-505dc22e0556",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Crud",
+      "targets": [
+        ["linkText=Crud", "linkText"],
+        ["css=.nav-item:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Crud')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Cuenta')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Crud')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "17ed5665-a4f2-4588-a980-84dfbacc2fbd",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Acciones",
+      "targets": [
+        ["linkText=Transaccion", "linkText"],
+        ["css=tr:nth-child(1) a", "css:finder"],
+        ["xpath=//a[contains(text(),'Transaccion')]", "xpath:link"],
+        ["xpath=//table[@id='tabla']/tbody/tr/td[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/transaccion/index?id=1')]", "xpath:href"],
+        ["xpath=//td[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Transaccion')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "788fca7a-0cf7-4019-87d0-7730aa2bea70",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Registrar transaccion",
+      "targets": [
+        ["linkText=Registrar transaccion", "linkText"],
+        ["css=div:nth-child(3) > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Registrar transaccion')]", "xpath:link"],
+        ["xpath=//div[@id='Correcto']/main/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/transaccion/crear?id=1')]", "xpath:href"],
+        ["xpath=//main/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Registrar transaccion')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a52bbf57-4d39-4cb6-85c1-37ed16186ffa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//div[@id='Correcto']/main/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Guardar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "63cedf03-a7de-4350-9ac1-9f5ce02ca45a",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "bd39b582-7590-462c-9e92-60ba5a0b7ae1",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://localhost:44315/"],
+  "plugins": []
+}
